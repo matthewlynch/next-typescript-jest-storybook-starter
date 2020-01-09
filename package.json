@@ -1,0 +1,63 @@
+{
+  "name": "next-typescript-jest-storybook-starter",
+  "version": "0.1.0",
+  "description": "A Next.js project that uses TypeScript, Styled Components, Jest and Storybook.",
+  "main": "index.js",
+  "author": "Matthew Lynch <matt@mattlynch.io>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "export": "next export",
+    "start": "next start",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "storybook": "start-storybook -s ./public -p 6006",
+    "build-storybook": "build-storybook",
+    "format": "prettier --write \"{src,.storybook}/**/*.{js,ts,tsx,css,json,md}\""
+  },
+  "dependencies": {
+    "next": "^9.1.7",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "styled-components": "^5.0.0-rc.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@storybook/addon-actions": "^5.2.8",
+    "@storybook/addon-info": "^5.2.8",
+    "@storybook/addon-links": "^5.2.8",
+    "@storybook/addons": "^5.2.8",
+    "@storybook/react": "^5.2.8",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.4.0",
+    "@types/jest": "^24.0.25",
+    "@types/node": "^13.1.4",
+    "@types/react": "^16.9.17",
+    "@types/react-test-renderer": "^16.9.1",
+    "@types/styled-components": "^4.4.1",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-styled-components": "^1.10.6",
+    "babel-preset-react-app": "^9.1.0",
+    "husky": "^3.1.0",
+    "jest": "^24.9.0",
+    "lint-staged": ">=8",
+    "prettier": "^1.19.1",
+    "react-docgen-typescript-loader": "^3.6.0",
+    "react-test-renderer": "^16.12.0",
+    "ts-jest": "^24.3.0",
+    "typescript": "^3.7.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,css,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
